@@ -25,6 +25,8 @@ def main ():
     filename = 'sitka_weather_2018_simple.csv'
     with open(filename) as f:
         reader = csv.reader(f)
+        header_row = next(reader)
+        
 
         # Get dates and high temperatures from this file.
         #*** Edited to include lows***
