@@ -1,11 +1,13 @@
 #Amanda New
 #CSD325-A311
 #Module 9 
-#APIs
-
+#
 import requests
-response = requests.get("http://api.open-notify.org/astros")
-#print(response.status_code)
+
+url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo"
+response = requests.get(url)
+
+print(response.status_code)
 
 #print(response.json())
 
@@ -16,3 +18,5 @@ def jprint(obj):
     print(text)
 
 jprint(response.json())
+
+    
